@@ -1,6 +1,23 @@
 ;;;;{BSB GENERATED: NO EDIT
 (subdir ./src
 (rule
+(targets  App.ast)
+ (deps (:inputs  App.res) )
+(action
+ (run melc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  App.d)
+ (deps (:inputs  .././src/App.ast) )
+(action (run meldep -cwd ./src -root /Users/mando/git/melange-editor-support  %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
+(targets  App.cmj App.cmi App.cmt App.bs.js)
+ (deps (:inputs  App.ast)  (include App.d) ../bsconfig.json)
+(action
+  (run melc -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o App.cmj %{inputs}))
+(enabled_if %{bin-available:melc}) )
+ (rule
 (targets  Main.ast)
  (deps (:inputs  Main.re) )
 (action
@@ -35,7 +52,7 @@
   (run melc -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o Hello.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  
-(alias (name bsb_world)(deps  Hello.bs.js Main.bs.js)
+(alias (name bsb_world)(deps  Hello.bs.js Main.bs.js App.bs.js)
 (enabled_if %{bin-available:melc})))
 
 
