@@ -1,6 +1,6 @@
 {
     "ocaml.sandbox": {
-        "kind": "esy",
-        "root": "${workspaceFolder:melange-editor-support}"
+        "kind": "custom",
+        "template": "$prog $args --fallback-read-dot-merlin"
     }
 }
