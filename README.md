@@ -62,6 +62,6 @@ You still get errors in the your file. If you use `opam(4.14.0)` directly as san
 4. On the lefthand side, click OCaml extension icon
 5. Click "Select sandbox"
 6. Select "Custom" from the dropdown
-7. Pass the flag, the input box should contain $prog $args --fallback-read-dot-merlin
+7. Pass the flag, the input box should contain `$prog $args --fallback-read-dot-merlin`
 8. Voila, at least typehints/navigation etc seem to work
 ```
