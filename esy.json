@@ -1,11 +1,12 @@
 {
-  "name": "melange-project",
+  "name": "melange-editor-support",
   "dependencies": {
     "ocaml": "4.14.0",
     "@opam/reason": "3.8.0",
-    "melange": "melange-re/melange#57faf26",
+    "@opam/dot-merlin-reader": "4.2",
+    "melange": "melange-re/melange",
     "@opam/cmdliner": "1.1.0",
-    "@opam/ocaml-lsp-server": "*"
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#196ad28"
   },
   "resolutions": {
     "@opam/reason": "reasonml/reason:reason.opam#4f6ff7616bfa699059d642a3d16d8905d83555f6"

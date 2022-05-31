@@ -32,3 +32,22 @@ esy x node _build/default/src/Main.bs.js
 ```
 
 to see the result of the script running.
+
+## Editor support in VSCode
+
+Using these dependencies
+```json
+  "dependencies": {
+    "ocaml": "4.14.0",
+    "@opam/reason": "3.8.0",
+    "@opam/dot-merlin-reader": "4.2",
+    "melange": "melange-re/melange",
+    "@opam/cmdliner": "1.1.0",
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam#196ad28"
+  },
+```
+
+Select `esy(melange-editor-support)` as your sandbox.
+
+You still get errors in the your file. If you use `opam(4.14.0)` directly as sandbox you dont get errors.
+

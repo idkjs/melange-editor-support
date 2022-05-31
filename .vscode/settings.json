@@ -1,0 +1,7 @@
+{
+    "ocaml.sandbox": {
+        "kind": "esy",
+        "root": "${workspaceFolder:melange-editor-support}"
+    },
+    "workbench.colorTheme": "Monokai"
+}
